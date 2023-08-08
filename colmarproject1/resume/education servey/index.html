@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Education Survey Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .survey-form {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: rgba(251, 183, 152, 0.329);
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    .question label {
+      display: inline-block;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .question input[type="text"],
+    .question input[type="radio"],
+    .question select {
+      width: 80%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .question input[type="radio"] {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+    h1{
+        background-color: darkgray;
+        color: black;
+        padding: 20px;
+        text-align: center;
+        
+    }
+  </style>
+</head>
+<body>
+    <div>
+        <h1>Education Survey </h1>
+    </div>
+  <div class="survey-form">
+    
+    <form>
+      <div class="question">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="question">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+      </div>
+
+      <div class="question">
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+      </div>
+
+      <div class="question">
+        <label for="education-level">Highest Education Level:</label>
+        <select id="education-level" name="education-level" required>
+          <option value="" selected disabled>Select your highest education level</option>
+          <option value="high-school">High School</option>
+          <option value="associate-degree">Associate Degree</option>
+          <option value="bachelor-degree">Bachelor's Degree</option>
+          <option value="master-degree">Master's Degree</option>
+          <option value="doctorate">Doctorate</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>Preferred Learning Format:</label>
+        <br>
+        <input type="checkbox" id="online" name="learning-format" value="online">
+        <label for="online">Online Courses</label>
+        <br>
+        <input type="checkbox" id="in-person" name="learning-format" value="in-person">
+        <label for="in-person">In-Person Classes</label>
+        <br>
+        <input type="checkbox" id="hybrid" name="learning-format" value="hybrid">
+        <label for="hybrid">Hybrid (Combination of Online and In-Person)</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
